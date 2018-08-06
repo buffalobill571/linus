@@ -64,7 +64,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'blog',
+    'apps.blog',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -97,7 +97,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'linus.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database

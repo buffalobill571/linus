@@ -7,7 +7,7 @@ virtual_env_name = 'linus'
 env.is_test = False
 enable_virtualenv = 'source /usr/local/bin/virtualenvwrapper.sh'
 
-local_apps = [app_dir for app_dir in LOCAL_APPS]
+local_apps = [app_dir.split('.')[1] for app_dir in LOCAL_APPS]
 
 
 @hosts([server_ip])
