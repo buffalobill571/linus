@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 1  # (/config/settings/common.py - 3 = /)
+ROOT_DIR = environ.Path(__file__) - 2  # (/config/settings/common.py - 3 = /)
 APPS_DIR = ROOT_DIR.path('apps')
 public_root = ROOT_DIR.path('public')
 
