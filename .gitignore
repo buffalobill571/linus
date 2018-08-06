@@ -1,0 +1,17 @@
+.idea/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.vscode
+public/stat/
+public/media/
+**/migrations
+logs/
+backup/
+redis-4.0.1/
+public/media/**
+public/static/**
+trash/**
