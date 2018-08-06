@@ -15,3 +15,4 @@ redis-4.0.1/
 public/media/**
 public/static/**
 trash/**
+db.sqlite3
