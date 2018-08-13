@@ -2,4 +2,4 @@
 
 cd /home/linus/linus
 
-exec /home/linus/.virtualenvs/linus/bin/python manage.py celery worker -B
+exec /home/linus/.virtualenvs/linus_up/bin/python manage.py celery worker -B

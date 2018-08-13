@@ -3,7 +3,7 @@ from fabric.api import run, sudo, env, hosts
 
 server_ip = '142.93.80.207'
 
-virtual_env_name = 'linus'
+virtual_env_name = 'linus_up'
 env.is_test = False
 enable_virtualenv = 'source /usr/local/bin/virtualenvwrapper.sh'
 
