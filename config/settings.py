@@ -61,10 +61,12 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'rest_framework',
     'django_extensions',
+    'djcelery',
 ]
 
 LOCAL_APPS = [
     'apps.blog',
+    'apps.mail',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -111,6 +113,17 @@ DATABASES = {
     }
 }
 
+
+# EMAIL CONFIGURATION
+# ------------------------------------------------------------------------------
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'daniyar.pak@gmail.com'
+EMAIL_HOST_PASSWORD = '123123Aa'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'daniyar.pak@gmail.com'
+
+ADMIN_EMAIL = 'bdabylovb@gmail.com'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -159,3 +172,17 @@ MEDIA_ROOT = str(public_root.path('media'))
 MEDIA_URL = '/media/'
 
 FILE_UPLOAD_PERMISSIONS = 0o777
+
+###################################################################################################
+# CELERY CONFIGS ##################################################################################
+BROKER_URL = str(env('BROKER_URL', default='amqp://linus_user:linus_password@localhost:5672/linus'))
+CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
+CELERY_TASK_RESULT_EXPIRES = 7*86400
+CELERY_SEND_EVENTS = True
+CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
+CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+import djcelery
+
+djcelery.setup_loader()
+###################################################################################################
