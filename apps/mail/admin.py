@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.mail.models import EmailMessage
+
+
+@admin.register(EmailMessage)
+class EmailMessageAdmin(admin.ModelAdmin):
+    pass
