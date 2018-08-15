@@ -123,7 +123,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'daniyar.pak@gmail.com'
 
-ADMIN_EMAIL = 'bdabylovb@gmail.com'
+# ADMIN_EMAILS = ['bdabylovb@gmail.com', '']
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
