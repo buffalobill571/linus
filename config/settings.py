@@ -32,7 +32,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG", False)
 
-ALLOWED_HOSTS = ['142.93.80.207', '127.0.0.1', '0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['142.93.80.207', '127.0.0.1', '0.0.0.0', 'localhost', '195.201.217.12']
 
 INTERNAL_IPS = ['127.0.0.1', '::1', '142.93.80.207']
 
