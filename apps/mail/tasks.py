@@ -13,13 +13,15 @@ def send_notification(mes_id):
 
     address = mes.email
     body = mes.body
+    phone = mes.phone
 
     subject = 'Notification'
     email_tmp = loader.render_to_string(
         'mail/notification.html',
         {
             'email': address,
-            'body': body
+            'body': body,
+            'phone': phone,
         }
     )
 
