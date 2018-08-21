@@ -1,11 +1,11 @@
 from config.settings import LOCAL_APPS
 from fabric.api import run, sudo, env, hosts
 
-server_ip = '142.93.80.207'
+server_ip = '195.201.217.12'
 
 virtual_env_name = 'linus_up'
 env.is_test = False
-enable_virtualenv = 'source /usr/local/bin/virtualenvwrapper.sh'
+enable_virtualenv = 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh'
 
 local_apps = [app_dir.split('.')[1] for app_dir in LOCAL_APPS]
 
@@ -14,9 +14,9 @@ local_apps = [app_dir.split('.')[1] for app_dir in LOCAL_APPS]
 def prod():
     env.hosts = [server_ip]
     env.branch = 'master'
-    env.app_path = '/home/linus/linus'
-    env.user = 'linus'
-    env.password = 'torvalds'
+    env.app_path = '/home/richard/linus'
+    env.user = 'richard'
+    env.password = 'stallman'
 
 
 def git_stash():
