@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-cd /home/linus/linus
+cd /home/richard/linus
 
-exec /home/linus/.virtualenvs/linus_up/bin/python manage.py celery worker
+exec /home/richard/.virtualenvs/richard/bin/python manage.py celery worker
